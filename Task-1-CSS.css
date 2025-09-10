@@ -1,0 +1,155 @@
+* {
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+	margin: none;
+	padding: none;
+	text-align: left;
+	border-bottom: 5px groove #bbbbbb;
+}
+
+body {
+	background-color: #660000;
+	color: #bbbbbb;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+@keyframes fade-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px) scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px) scale(1);
+	}
+}
+
+
+
+.jenna-image {
+    max-width: 500px;
+	max-height: 500px;
+	border: 10px groove #bbbbbb;
+	padding: none;
+}
+
+.jenna-about-image {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+
+.about-jenna {
+	font-size: 20px;
+    padding-left: 30px;
+	padding-right: 30px;
+    padding-top: none;
+    text-align: left;
+	color: #bbbbbb;
+}
+
+h2 {
+	text-align: left;
+	padding-left: 250px;
+	position: absolute;
+}
+
+.groove-1 {
+	border-bottom: 5px groove #bbbbbb;
+	padding-top: 20px;
+}
+
+.contact_info {
+	animation: fade-down 1s;
+	color: #FFD700;
+}
+
+.contact_me {
+  background-color: #4a0000;
+  border: 15px groove #bbbbbb;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 10px;
+}
+
+.resume {
+	padding-top: 30px;
+}
+
+.contact_me, .resume-link {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+}
+
+.button {
+	background-color: #aaaaaa;
+	color: #660000;
+	font-weight: bold;
+	text-align: center;
+	animation: fade-down 1s;
+	width: auto;
+	height: auto;
+	font-size: 20px;
+	border: 5px groove #FFD700;
+}
+
+.button-resume:hover {
+	transform: scale(1.05);
+}
+
+
+a:link {
+	color: #FFD700;
+}
+
+a:visited {
+	color: #FFD700;
+}
+
+a:hover {
+	color: #000080;
+	transform: scale(1.05);
+}
+
+a:active {
+	color: #ADFF2F;
+}
+
+.employable_qualities {
+	color: #FFD700;
+	border: 5px groove #FFD700;
+	border-left: none;
+	border-right: none;
+}
+
+
+
+.emp_qua_one, .employable_qualities {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+}
+
+.quote {
+	font-size: 20px;
+}
+
+.emp_qua_two {
+	padding-top: 50px;
+}
+
+.emp_qua_one {
+	padding-left: 250px;
+}
+
+b {
+	font-size: 25px;
+}
