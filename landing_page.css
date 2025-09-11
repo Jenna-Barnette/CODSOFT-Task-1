@@ -1,0 +1,56 @@
+body {
+	background-color: #660000;
+	color: #FFD700;
+}
+
+* {
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+.all_works, .website {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-top: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.img_sizing {
+	width: auto;
+	height: 200px;
+	border: solid black 2px;
+}
+
+.website:hover {
+	transform: scale(1.05);
+}
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: black;
+	transform: scale(1.10);
+}
+
+a:active {
+	color: #ADFF2F;
+}
+
+footer {
+	border: groove 5px #FFD700;
+	text-align: center;
+	height: 60px;
+	padding-top: 20px;
+	background-color: #FFFFC5;
+	font-size: 30px;
+}

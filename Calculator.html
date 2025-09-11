@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--Programmer: Jenna Barnette-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	<link rel="stylesheet" href="Calculator-css.css" />
+	    <title>Calculator</title> 
+  </head>
+ <body>
+  <h1>This is my calculator!</h1>
+   
+    <!-- Code for calculator buttons and display -->
+	<div class="everything">
+    <div class="space">
+     
+    </div>
+	
+	<div class="calc_buttons">
+	
+
+	  <div class="button" onclick="button(7)">
+      <p class="seven" >7</p>
+      </div>
+	
+	  <div class="button" onclick="button(8)">
+      <p class="eight" >8</p>
+      </div>
+     
+      <div class="button" onclick="button(9)">
+      <p class="nine" >9</p>
+      </div>
+
+      <div class="button" onclick="math_function('*')">
+      <p class="multiply" >X</p>
+      </div>
+  
+      <div class="button" onclick="button(4)">
+      <p class="four" >4</p>
+      </div>
+  
+      <div class="button" onclick="button(5)">
+      <p class="five" >5</p>
+      </div>
+	
+	  <div class="button" onclick="button(6)">
+      <p class="six" >6</p>
+      </div>
+     
+      <div class="button" onclick="math_function('+')">
+      <p class="plus" >+</p>
+      </div>
+	 
+	  <div class="button" onclick="button(1)">
+      <p class="one" >1</p>
+      </div>
+	 
+      <div class="button" onclick="button(2)">
+      <p class="two" >2</p>
+      </div>
+     
+	  <div class="button" onclick="button(3)">
+      <p class="three" >3</p>
+      </div>
+	
+	  <div class="button" onclick="math_function('-')">
+      <p class="minus" >-</p>
+      </div>
+	
+	  <div class="button" onclick="clear_display()">
+      <p class="clear" >Clear</p>
+      </div>
+	
+	  <div class="button" onclick="button(0)">
+      <p class="zero" >0</p>
+      </div>
+	
+	  <div class="button" onclick="equal('=')">
+      <p class="equal" >=</p>
+      </div>
+	  
+	  <div class="button" onclick="math_function('/')">
+      <p class="divide" >/</p>
+      </div>
+	  
+	
+	</div>
+	
+	<input type="text" id="display" class="display" readonly>
+	
+   </div>
+	
+
+  <br>
+
+
+  <script>
+  
+  let first_input = "";
+  let first_num = null;
+  let math = null;
+
+  function change_display(value) {
+    document.getElementById("display").value = value;
+  }
+
+  function button(num) {
+    first_input += num;
+    change_display(first_input);
+  }
+  
+  function clear_display() {
+    first_input = "";
+    first_num = null;
+    math = null;
+    change_display("");
+  }
+
+  function math_function(mf) {
+    if (first_input === "") return;
+    first_num = parseFloat(first_input);
+    math = mf;
+    first_input = "";
+    change_display("");
+  }
+
+  function equal() {
+    if (first_num === null || first_input === "") return;
+    let second_num = parseFloat(first_input);
+    let result;
+
+    switch (math) {
+      case "+": result = first_num + second_num; break;
+      case "-": result = first_num - second_num; break;
+      case "*": result = first_num * second_num; break;
+      case "/": result = first_num / second_num; break;
+      default: return;
+    }
+
+    change_display(result);
+    first_input = "";
+    first_num = null;
+    math = null;
+  }
+
+	
+  </script>
+
+	
+	
+
+  
+  </body>
+  </html>
